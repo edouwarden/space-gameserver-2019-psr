@@ -1,0 +1,24 @@
+# Build output
+target/
+*.class
+
+# Maven / IDE
+.mvn/
+.idea/
+*.iml
+.classpath
+.project
+.settings/
+
+# Runtime data
+run/
+logs/
+*.log
+
+# Python voice client
+__pycache__/
+*.pyc
+.venv/
+
+# OS noise
+.DS_Store

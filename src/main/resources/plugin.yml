@@ -1,0 +1,26 @@
+name: Space
+version: 1.0.0
+api-version: 1.14
+main: fr.edouwarden.space.Main
+prefix: SP
+authors: [edouwarden]
+description: Space station and orbital-ship game server.
+website: https://github.com/edouwarden/space-gameserver-2019-psr
+depend:
+  - WorldEdit
+  - WorldGuard
+  - AuthMe
+  - ProtocolLib
+  - EffectLib
+  - Vault
+  - SmartInvs
+  - LibsDisguises
+commands:
+  space:
+    description: Space game-server administration.
+    usage: /space <ko|power|jobs|bounty|weapon|map|worlds|raid|rpk|meta|loopspeed>
+    permission: space.command
+permissions:
+  space.command:
+    description: Access to the /space administration command.
+    default: op

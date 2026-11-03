@@ -1,0 +1,31 @@
+# Crafting data for the job system.
+#
+# Every top-level entry under `Craft` picks one of three surfaces:
+#   type: Table    -> a shaped 3x3 recipe, using l<column>r<row> slots
+#   type: Furnace  -> a smelting recipe, using top/bottom slots
+#   type: Anvil    -> the fabrication bench: two items placed on the block,
+#                     then struck with the hammer (a stick named Fabrication Hammer)
+#
+# `item.<name>` is the result stack. `custom: true` makes an ingredient point
+# at another `item.<name>` entry instead of a vanilla material.
+item:
+  plasma_cutter:
+    ==: org.bukkit.inventory.ItemStack
+    type: DIAMOND_SWORD
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      display-name: §bPlasma Cutter
+      lore:
+      - §7Cuts hull plate without a torch.
+
+Craft:
+  plasma_cutter:
+    type: Anvil
+    Anvil:
+      Item1:
+        custom: false
+        type: OAK_LOG
+      Item2:
+        custom: false
+        type: IRON_INGOT

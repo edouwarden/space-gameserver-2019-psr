@@ -1,0 +1,54 @@
+# Space game-server configuration.
+# This file is sanitized: no credentials or private hosts are shipped.
+# Environment variables (see variables/DatabaseConfig) override the database section.
+
+database:
+  host: "127.0.0.1"
+  port: 3306
+  name: "space"
+  user: "space"
+  password: ""
+  tables:
+    ship: "sp_ship"
+    bounty: "sp_bounty"
+
+voice:
+  # Host running the Python proximity-voice service.
+  host: "127.0.0.1"
+  # Port clients connect to for audio.
+  audio-port: 5000
+  # Port the Minecraft plugin connects to for routing updates.
+  control-port: 81
+  range:
+    high: 15
+    normal: 9
+    low: 3
+    mute: 0
+
+resource-pack:
+  # Optional. Leave empty to disable the resource pack prompt.
+  url: ""
+
+grid:
+  # Origin and spacing of the orbital ship grid.
+  start-x: 1195
+  start-z: -1081
+  spacing-x: 75
+  spacing-z: 75
+
+loop:
+  # Ticks expressed in seconds for the main game loop and task pacing.
+  seconds: 20
+  speed: 1000
+
+gameplay:
+  food-level: 19
+  max-rent-days: 20
+  walk-speed: 0.095
+  run-speed: 0.25
+  raid-enabled: false
+
+rendering:
+  # Avatar image used by the bounty-poster map renderer.
+  # Leave empty to render only the local frame (assets are not shipped).
+  avatar-url: ""
